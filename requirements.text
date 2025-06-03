@@ -1,2 +1,2 @@
-snowflake-snowpark-python
+pip install snowflake-snowpark-python
 streamlit
