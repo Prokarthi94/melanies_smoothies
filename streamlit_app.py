@@ -38,6 +38,8 @@ if time_to_insert:
     session.sql(my_insert_stmt).collect()
     st.success('Your smoothie '+name_on_order+' is ordered!', icon="✅")
 
+# New section to display smoothie nutrient information
 import requests
 smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
-st.text(smoothiefroot_response.json())
+#st.text(smoothiefroot_response.json())
+sf_df=st.dataframe(data=smoothiefroot_response.json(), use_container_width=True)
